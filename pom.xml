@@ -15,8 +15,9 @@
 	<description>Proyecto Inventario PhotoStudio</description>
 
 	<properties>
-		<java.version>1.8</java.version>
 		<start-class>com.cahc.proyecto.ProyectoApplication</start-class>
+		<java.version>1.8</java.version>
+		
 	</properties>
 
 	<dependencies>
