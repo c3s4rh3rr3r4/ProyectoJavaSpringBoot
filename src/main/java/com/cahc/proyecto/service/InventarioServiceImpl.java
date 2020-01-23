@@ -40,7 +40,7 @@ public class InventarioServiceImpl implements InventarioService {
 	public void deleteInventario(long id) {
 		
 		inventarioRepository.deleteById(id);
-		
+
 	}
 
 }

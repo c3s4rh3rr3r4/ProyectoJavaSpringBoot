@@ -11,19 +11,25 @@ public class Inventario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	
-	@Column(name="producto")
+
+	@Column(name = "producto")
 	private String producto;
-	
-	@Column(name="tipo")
+
+	@Column(name = "tipo")
 	private String tipo;
-	
-	@Column(name="detalle")
+
+	@Column(name = "detalle")
 	private String detalle;
-	
-	@Column(name="cantidad")
+
+	@Column(name = "cantidad")
 	private long cantidad;
 
+	@Column(name = "minimo")
+	private String minimo;
+	
+	@Column(name = "requerido")
+	private String requerido;
+	
 	public long getId() {
 		return id;
 	}
@@ -63,5 +69,21 @@ public class Inventario {
 	public void setCantidad(long cantidad) {
 		this.cantidad = cantidad;
 	}
-	
+
+	public String getMinimo() {
+		return minimo;
+	}
+
+	public void setMinimo(String minimo) {
+		this.minimo = minimo;
+	}
+
+	public String getRequerido() {
+		return requerido;
+	}
+
+	public void setRequerido(String requerido) {
+		this.requerido = requerido;
+	}
+
 }
