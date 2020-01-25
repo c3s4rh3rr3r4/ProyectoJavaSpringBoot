@@ -24,12 +24,9 @@ public class Inventario {
 	@Column(name = "cantidad")
 	private long cantidad;
 
-	@Column(name = "minimo")
-	private String minimo;
-	
-	@Column(name = "requerido")
-	private String requerido;
-	
+	@Column(name = "precio")
+	private Double precio;
+
 	public long getId() {
 		return id;
 	}
@@ -70,20 +67,12 @@ public class Inventario {
 		this.cantidad = cantidad;
 	}
 
-	public String getMinimo() {
-		return minimo;
+	public Double getPrecio() {
+		return precio;
 	}
 
-	public void setMinimo(String minimo) {
-		this.minimo = minimo;
-	}
-
-	public String getRequerido() {
-		return requerido;
-	}
-
-	public void setRequerido(String requerido) {
-		this.requerido = requerido;
+	public void setPrecio(Double precio) {
+		this.precio = precio;
 	}
 
 }

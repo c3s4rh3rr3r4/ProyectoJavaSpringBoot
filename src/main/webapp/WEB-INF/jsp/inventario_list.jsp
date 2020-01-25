@@ -2,8 +2,8 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
-<%@ page import="java.util.*" %>
-<%@ page import="java.text.SimpleDateFormat"%> 
+<%@ page import="java.util.*"%>
+<%@ page import="java.text.SimpleDateFormat"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -24,8 +24,7 @@
 				<th scope="row">Tipo</th>
 				<th scope="row">Detalle</th>
 				<th scope="row">Cantidad</th>
-				<th scope="row">Mínimo</th>
-				<th scope="row">Requerido</th>
+				<th scope="row">Precio unitario</th>
 				<th scope="row">Editar</th>
 				<th scope="row">Eliminar</th>
 			</thead>
@@ -37,8 +36,7 @@
 						<td>${inventario.tipo }</td>
 						<td>${inventario.detalle }</td>
 						<td>${inventario.cantidad }</td>
-						<td>${inventario.minimo}</td>
-						<td>${inventario.requerido }</td>
+						<td>${inventario.precio}</td>
 						<td><spring:url
 								value="/inventario/updateInventario/${inventario.id }"
 								var="updateURL" /> <a class="btn btn-primary"
@@ -54,15 +52,24 @@
 		<spring:url value="/inventario/addInventario/" var="addURL" />
 		<a class="btn btn-primary" href="${addURL }" role="button">Agregar
 			a inventario</a>
+
+		<spring:url value="/reporte/html" var="html" />
+		<a class="btn btn-primary" href="${html }" role="button">Reporte
+			en HTML</a>
+
+		<spring:url value="/reporte/pdf" var="pdf" />
+		<a class="btn btn-primary" href="${pdf }" role="button">Reporte en
+			PDF</a>
 	</div>
 
 </body>
 </html>
 <%
-   Date dNow = new Date();
-   SimpleDateFormat ft = 
-   new SimpleDateFormat ("MM/dd/yyyy");
-   String currentDate = ft.format(dNow);
+	Date dNow = new Date();
+	SimpleDateFormat ft = new SimpleDateFormat("MM/dd/yyyy");
+	String currentDate = ft.format(dNow);
 %>
 
-<p>The current date is: <%=currentDate%></p>
+<p>
+	La fecha de hoy es:
+	<%=currentDate%></p>

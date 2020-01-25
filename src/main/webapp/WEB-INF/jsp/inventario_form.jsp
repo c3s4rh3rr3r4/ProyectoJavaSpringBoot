@@ -35,14 +35,12 @@
     <form:input path="cantidad" cssClass="form-control" id="cantidad" />
    </div>
    <div class="form-group">
-    <label>Mínimo</label>
-    <form:input path="minimo" cssClass="form-control" id="minimo" />
+    <label>Precio unitario</label>
+    <form:input path="precio" cssClass="form-control" id="precio" type="number" />
    </div>
-   <div class="form-group">
-    <label>Requerido</label>
-    <form:input path="requerido" cssClass="form-control" id="requerido" />
-   </div>
+ 
    <button type="submit" class="btn btn-primary">Grabar</button>
+   
   </form:form>
   </div>
 </body>
